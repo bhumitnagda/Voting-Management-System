@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Flashing and moving "Vote Now" text -->
+<div class="header">
+    <marquee behavior="scroll" direction="left" scrollamount="10">
+        <span class="vote-now">VOTE NOW</span>
+    </marquee>
+</div>
+
+<!-- Sidebar with Dashboard, Candidate, and Admin Panel options -->
+<div class="sidebar">
+    <ul>
+        <li><a href="#dashboard" id="dashboard-link">Dashboard</a></li>
+        <li><a href="#candidate" id="candidate-link">Candidate</a></li>
+        <li><a href="#manage-votes" id="manage-votes-link">Manage Votes</a></li>
+        <li><a href="#manage-candidates" id="manage-candidates-link">Manage Candidates</a></li>
+    </ul>
+</div>
+
+<!-- Main content area -->
+<div class="main-content">
+    <!-- Voting Dashboard -->
+    <!-- Voting Dashboard -->
+    <div id="dashboard">
+        <h1>Cast Your Vote</h1>
+        <form id="vote-form">
+            <label>
+                <input type="radio" name="candidate" value="1"> Candidate 1
+            </label>
+            <label>
+                <input type="radio" name="candidate" value="2"> Candidate 2
+            </label>
+            <label>
+                <input type="radio" name="candidate" value="3"> Candidate 3
+            </label>
+            <label>
+                <input type="radio" name="candidate" value="4"> Candidate 4
+            </label>
+            <label>
+                <input type="radio" name="candidate" value="5"> Candidate 5
+            </label>
+            <input type="hidden" id="position-id" value="1"> <!-- Example position ID -->
+            <button type="submit">Submit Vote</button>
+        </form>
+        <div class="vote-message">Click on a button to cast your vote</div>
+    </div>
+
+    <!-- Candidate Information -->
+    <div id="candidate" style="display:none;">
+        <h1>Candidate Information</h1>
+        <div class="candidate-info">
+            Candidate 1
+            <span>Name: John Doe<br>Age: 45</span>
+        </div>
+        <div class="candidate-info">
+            Candidate 2
+            <span>Name: Jane Smith<br>Age: 39</span>
+        </div>
+        <div class="candidate-info">
+            Candidate 3
+            <span>Name: Alice Johnson<br>Age: 52</span>
+        </div>
+        <div class="candidate-info">
+            Candidate 4
+            <span>Name: Bob Brown<br>Age: 47</span>
+        </div>
+        <div class="candidate-info">
+            Candidate 5
+            <span>Name: Charlie Davis<br>Age: 50</span>
+        </div>
+    </div>
+
+    <!-- Manage Votes Section -->
+    <div id="manage-votes" class="admin-section" style="display:none;">
+        <h2>Manage Votes</h2>
+        <table>
+            <tr>
+                <th>Candidate</th>
+                <th>Votes</th>
+            </tr>
+            <tr>
+                <td>Candidate 1</td>
+                <td id="votes-candidate-1">0</td> <!-- Static display of votes -->
+            </tr>
+            <tr>
+                <td>Candidate 2</td>
+                <td id="votes-candidate-2">0</td> <!-- Static display of votes -->
+            </tr>
+            <tr>
+                <td>Candidate 3</td>
+                <td id="votes-candidate-3">0</td> <!-- Static display of votes -->
+            </tr>
+            <tr>
+                <td>Candidate 4</td>
+                <td id="votes-candidate-4">0</td> <!-- Static display of votes -->
+            </tr>
+            <tr>
+                <td>Candidate 5</td>
+                <td id="votes-candidate-5">0</td> <!-- Static display of votes -->
+            </tr>
+        </table>
+    </div>
+
+    <!-- Manage Candidates Section -->
+    <div id="manage-candidates" class="admin-section" style="display:none;">
+        <h2>Manage Candidates</h2>
+        <p>Add or edit candidate information:</p>
+        <label for="candidate-name">Name:</label>
+        <input type="text" id="candidate-name">
+        <label for="candidate-age">Age:</label>
+        <input type="number" id="candidate-age">
+        <button>Add/Update Candidate</button>
+
+        <h2>Existing Candidates</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>45</td>
+                <td><button>Edit</button> <button>Delete</button></td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>39</td>
+                <td><button>Edit</button> <button>Delete</button></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
