@@ -1,0 +1,219 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /*background: url('') repeat;  Add your texture image path here */
+    overflow-y: hidden; /* Prevent scrolling */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vote-now {
+    color: #ff5733;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: flashing 1s infinite;
+}
+
+@keyframes flashing {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0.5;
+    }
+}
+
+.main-content {
+    padding: 20px;
+    padding-top: 100px;
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: hidden; /* Prevent scrolling */
+}
+
+#vote-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    line-height: 150px;
+    margin: 20px;
+}
+
+#vote-form label {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #444; /* Dark grayish blackish red */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 150px;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#vote-form label:hover {
+    background-color: #45a049; /* Green color */
+    transform: scale(1.1);
+}
+
+#vote-form input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+}
+
+#vote-form input[type="radio"]:checked + label {
+    background-color: #4CAF50; /* Green background for selected candidate */
+}
+
+#vote-form button {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#vote-form button:hover {
+    background-color: #45a049; /* Darker green */
+    transform: scale(1.05);
+}
+
+.vote-message {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+}
+
+.candidate-info {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #ff5733;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 150px;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.candidate-info:hover {
+    background-color: #c70039;
+    transform: scale(1.1);
+}
+
+.candidate-info span {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    padding: 10px 0;
+}
+
+.candidate-info:hover span {
+    display: block;
+}
+
+.admin-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.admin-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.admin-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.admin-section table, th, td {
+    border: 1px solid #ccc;
+}
+
+.admin-section table th, .admin-section table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.admin-section table th {
+    background-color: #f4f4f4;
+}
+
+.admin-section input[type="text"], .admin-section input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.admin-section button {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.admin-section button:hover {
+    background-color: #45a049; /* Darker green */
+    transform: scale(1.05);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- Flashing and moving "Vote Now" text -->
+<div class="header">
+    <marquee behavior="scroll" direction="left" scrollamount="10">
+        <span class="vote-now">VOTE NOW</span>
+    </marquee>
+</div>
+
+<!-- Sidebar with Dashboard and Admin Panel options -->
+<div class="sidebar">
+    <ul>
+        <!--<li><a href="#dashboard" id="dashboard-link">Dashboard</a></li> -->
+    </ul>
+</div>
+
+<!-- Main content area -->
+<div class="main-content">
+    <!-- Voting Dashboard -->
+    <div id="dashboard">
+        <h1>Cast Your Vote</h1>
+        <form id="vote-form">
+            <input type="hidden" id="position-id" value="1"> <!-- Example position ID -->
+            <div id="candidates-list"></div> <!-- Section for displaying candidates -->
+            <button type="submit">Submit Vote</button>
+        </form>
+        <div class="vote-message">Click on a candidate to cast your vote</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

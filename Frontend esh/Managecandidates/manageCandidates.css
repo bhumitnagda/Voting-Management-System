@@ -1,0 +1,125 @@
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container Styling */
+.container {
+  width: 600px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-out;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+.logout-btn {
+  background: #ff6b6b;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #ff4757;
+}
+
+/* Form Section Styling */
+.form-section {
+  margin-top: 20px;
+}
+
+#candidateName {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#addCandidateBtn {
+  background: #2ed573;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#addCandidateBtn:hover {
+  background: #1dd1a1;
+}
+
+/* Candidate List Section Styling */
+.candidate-list-section {
+  margin-top: 30px;
+}
+
+.candidate-list {
+  list-style: none;
+  padding: 0;
+}
+
+.candidate-item {
+  background: #f1f2f6;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease-out;
+}
+
+.candidate-item:hover {
+  transform: translateX(10px);
+}
+
+.delete-btn {
+  background: #ff6b6b;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: #ff4757;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

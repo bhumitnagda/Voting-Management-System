@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Candidates</title>
+  <link rel="stylesheet" href="manageCandidates.css">
+</head>
+<body>
+<div class="container">
+  <h1>Manage Candidates</h1>
+
+  <!-- Add Candidate Form -->
+  <div class="form-container">
+    <input type="text" id="candidateName" placeholder="Enter Candidate Name" required>
+    <input type="number" id="candidateAge" placeholder="Enter Candidate Age" required min="18">
+    <button id="addCandidateBtn">Add Candidate</button>
+  </div>
+
+  <!-- Candidates List -->
+  <ul id="candidateList">
+    <!-- Dynamically populated list items -->
+  </ul>
+
+  <!-- Logout Button -->
+  <button class="logout-btn">Logout</button>
+</div>
+
+<script src="manageCandidates.js"></script>
+</body>
+</html>

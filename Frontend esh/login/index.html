@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="login-box" id="login-tab">
+        <h2>Let's Vote</h2>
+        <form id="login-form">
+            <div class="input-box">
+                <label for="login-mail-id">Mail ID</label>
+                <input type="email" id="login-mail-id" name="username" required>
+            </div>
+            <div class="input-box">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account to vote? <a href="#" onclick="openSignup()">Sign up</a></p>
+    </div>
+
+    <div class="signup-box" id="signup-tab" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <div class="input-box">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required>
+            </div>
+            <div class="input-box">
+                <label for="signup-mail-id">Mail ID</label>
+                <input type="email" id="signup-mail-id" name="mail-id" required>
+            </div>
+            <div class="input-box">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" name="signup-password" required>
+            </div>
+            <div class="input-box">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
